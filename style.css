@@ -1,4 +1,4 @@
-#app {
+/* #app {
     background-color: lightgray;
     border-radius: 3%;
     margin: 0 auto;
@@ -15,11 +15,12 @@
     list-style: none;
 }
 
-.cat-list li {
-    border: 1px solid;
-}
 
 .cat-list li:hover {
     background-color: azure;
+    cursor: pointer;
+} */
+
+.cat-list li {
     cursor: pointer;
 }

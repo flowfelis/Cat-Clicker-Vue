@@ -1,0 +1,24 @@
+{
+  "name": "cat-clicker-vue",
+  "version": "1.0.0",
+  "description": "A Cat Clicker app with Vue.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flowfelis/Cat-Clicker-Vue.git"
+  },
+  "author": "flowfelis Alican",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flowfelis/Cat-Clicker-Vue/issues"
+  },
+  "homepage": "https://github.com/flowfelis/Cat-Clicker-Vue#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.0",
+    "popper.js": "^1.15.0"
+  }
+}

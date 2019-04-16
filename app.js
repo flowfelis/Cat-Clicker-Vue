@@ -43,6 +43,9 @@ var app = new Vue({
         },
         increaseCount: function() {
             this.currentCat.clickCount++;
+        },
+        isCurrentCat: function(cat) {
+            if (cat === this.currentCat) return true;
         }
     }
 });
