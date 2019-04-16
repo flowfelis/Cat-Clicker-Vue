@@ -6,22 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Cat Clicker Vue</title>
 </head>
 
 <body>
-    <div id="app">
-        <h2>Choose your cat</h2>
-        <ul class="cat-list">
-            <li v-for="cat in cats" v-on:click="changeCurrentCat(cat)">
-                {{ cat.name }}
-            </li>
-        </ul>
-        <h2 class="cat-name">{{ currentCat.name }}</h2>
-        <h3 class="cat-count">{{ currentCat.clickCount }}</h3>
-        <img class="cat-img" v-bind:src="currentCat.img" v-on:click="increaseCount">
+    <div id="app" class="container my-5 text-secondary bg-gradient-light">
+        <div class="row">
+            <div class="col-sm">
+                <h2 class="text-danger">Cats</h2>
+                <ul class="cat-list list-group mb-5">
+                    <li class="list-group-item" v-for="cat in cats" v-on:click="changeCurrentCat(cat)"
+                    v-bind:class="{active: isCurrentCat(cat), 'text-warning': isCurrentCat(cat)}">
+                        {{ cat.name }}
+                    </li>
+                </ul>
+                <h2 class="text-danger">Click Count</h2>
+                <h1 class="cat-count">{{ currentCat.clickCount }}</h1>
+            </div>
+            <div class="col-sm">
 
+                <h4 class="cat-name text-danger text-center mx-auto w-50 border-warning">{{ currentCat.name }}</h4>
+                <h1 class="cat-name text-center mx-auto w-75 border border-info">{{ currentCat.clickCount }}</h1>
+                <img class="cat-img rounded border border-warning" v-bind:src="currentCat.img"
+                    v-on:click="increaseCount">
+            </div>
+        </div>
 
     </div>
 
