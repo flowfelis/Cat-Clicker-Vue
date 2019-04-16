@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Cat Clicker Vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>Choose your cat</h2>
+        <ul class="cat-list">
+            <li v-for="cat in cats" v-on:click="changeCurrentCat(cat)">
+                {{ cat.name }}
+            </li>
+        </ul>
+        <h2 class="cat-name">{{ currentCat.name }}</h2>
+        <h3 class="cat-count">{{ currentCat.clickCount }}</h3>
+        <img class="cat-img" v-bind:src="currentCat.img" v-on:click="increaseCount">
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
